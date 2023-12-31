@@ -13,18 +13,18 @@ BACKGROUND_COLOR, BIRD_COLOR, PIPE_COLOR = (135, 206, 235), (255, 215, 0), (0, 1
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Flappy Bird Clone")
 
-bird_image = pygame.image.load("images/bird1.png")
+bird_image = pygame.image.load("bird1.png")
 bird_image = pygame.transform.scale(bird_image, (BIRD_WIDTH, BIRD_HEIGHT))
 
-background_image = pygame.image.load("images/flappy-background.png")
+background_image = pygame.image.load("flappy-background.png")
 
-pipe_image = pygame.image.load("images/pipe.png")
+pipe_image = pygame.image.load("pipe.png")
 pipe_image = pygame.transform.scale(pipe_image, (PIPE_WIDTH, HEIGHT))
 flipped_pipe_image = pygame.transform.flip(pipe_image, False, True)
 
-hit_sound = pygame.mixer.Sound("sounds/hit.wav")
-point_sound = pygame.mixer.Sound("sounds/point.wav")
-flap_sound = pygame.mixer.Sound("sounds/swoosh.wav")
+hit_sound = pygame.mixer.Sound("hit.wav")
+point_sound = pygame.mixer.Sound("point.wav")
+flap_sound = pygame.mixer.Sound("swoosh.wav")
 
 bird_x, bird_y, bird_velocity = WIDTH // 4, HEIGHT // 2 - BIRD_HEIGHT // 2, 0
 pipes, pipe_velocity, pipe_spawn_timer = [], -1, time.time()
